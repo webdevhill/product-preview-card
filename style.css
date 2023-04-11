@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body { 
+    background-color: hsl(30, 38%, 92%);
+}
+
+p {
+    font-size: 14px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 345px;
+    margin: auto;
+    margin-top: 20px;
+    background: hsl(0, 0%, 100%);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#image img {
+    max-width: 345px;
+    margin: auto;
+}
+
+.product-content {
+    margin: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: hsl(228, 12%, 48%);  
+}
+
+#product-content__category {
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+#product-content__name {
+    line-height: 2rem;
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    color: hsl(212, 21%, 14%);
+    margin-bottom: 1rem;
+}
+
+#product-content__desc {
+    line-height: 1.5rem; 
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+.price-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    /* margin-bottom: 1rem; */
+    height: 5rem;
+}
+
+#product-price__sale {
+    font-family: "Fraunces", serif;
+    font-size: 2em;
+    color: hsl(158, 36%, 37%); 
+}
+
+#product-price__retail {
+    text-decoration: line-through;
+}
+
+button {
+    width: 100%;
+    padding: 1rem;
+    background-color: hsl(158, 36%, 37%);
+    border: 0;
+    outline: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    border-radius: 10px 
+}
+
+#icon-cart {
+    padding-right: 0.8rem;
+}
+
+button:hover {
+    background-color: hsl(157, 38%, 15%);
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+        max-width: 700px;
+        margin-top: 110px;
+    }
+
+    #image img {
+        content: url(./images/image-product-desktop.jpg);
+        min-height: 100%;
+    }
+
+    .product-content {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
+    
+    #product-content__name{
+        margin-right: 100px;
+    }
+
+    #product-content__desc{
+        margin-right: 70px;
+    }
+
+    #product-price__sale {
+        font-size: 2.5rem;
+        padding-right: 20px;
+    }
+}
